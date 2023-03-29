@@ -1,0 +1,16 @@
+type Movie {
+    _id: ID!
+    title: String
+    director: String
+}
+
+type Query {
+    movies: [Movie]
+    getMovie(_id: ID!): Movie
+}
+
+type Mutation {
+    addMovie(title: String, director: String): Movie!
+    updateMovie(_id: ID!, title: String, director: String): Movie
+    deleteMovie(_id: ID!): Movie
+}
